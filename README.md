@@ -2,7 +2,7 @@
 An ontology for the Capability, Skill and Service model of Plattform Industrie 4.0
 
 ## Overview
-This is an ontology implementation of the CSS reference model as defined by [this Plattform Industrie 4.0 Whitepaper](https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html). The definitions according to this whitepaper can be found in a [Wiki page](). The most important elements of this reference model are:
+This is an ontology implementation of the CSS reference model as defined by [this Plattform Industrie 4.0 Whitepaper](https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html). The definitions according to this whitepaper can be found in a [Wiki page](https://github.com/hsu-aut/css-ontology/wiki/Definitions). The most important elements of this reference model are:
 
 ### Capability
 A *Capability* is an implementation-independent specification of a function in industrial production to achieve an effect in the physical or virtual world. A *Capability* may be implemented by one or more *Skills*.
