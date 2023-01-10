@@ -107,6 +107,12 @@
              rdfs:range :Capability .
 
 
+###  http://www.w3id.org/hsu-aut/css#proposes
+:proposes rdf:type owl:ObjectProperty ;
+          rdfs:domain :ServiceProvider ;
+          rdfs:range :ServiceOffer .
+
+
 ###  http://www.w3id.org/hsu-aut/css#providesCapability
 :providesCapability rdf:type owl:ObjectProperty ;
                     rdfs:domain :Resource ;
