@@ -1,8 +1,8 @@
 # CSS-Ontology
-An ontology for the Capability, Skill and Service model of Plattform Industrie 4.0
+An ontology containing the definitions of the Capability, Skill and Service (CSS) reference model of Plattform Industrie 4.0. The model is presented in this [whitepaper](https://www.plattform-i40.de/IP/Redaktion/EN/Downloads/Publikation/CapabilitiesSkillsServices.html). There is also a scientific publication about the CSS reference model in case you want to cite this work: https://www.degruyter.com/document/doi/10.1515/auto-2022-0117/html
 
 ## Overview
-This is an ontology implementation of the CSS reference model as defined by [this Plattform Industrie 4.0 Whitepaper](https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html). The definitions according to this whitepaper can be found in a [Wiki page](https://github.com/hsu-aut/css-ontology/wiki/Definitions). The most important elements of this reference model are:
+This is an ontology implementation of the CSS reference model as defined by [this Plattform Industrie 4.0 Whitepaper](https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html). All definitions according to this whitepaper can be found in a [Wiki page](https://github.com/hsu-aut/css-ontology/wiki/Definitions). The most important elements of this reference model are:
 
 ### Capability
 A *Capability* is an implementation-independent specification of a function in industrial production to achieve an effect in the physical or virtual world. A *Capability* may be implemented by one or more *Skills*.
@@ -14,11 +14,19 @@ A *Skill* is an executable implementation of an encapsulated (automation) functi
 ### Service
 A *Service* is a description of the commercial aspects and means of provision of offered *Capabilities*. A service may be considered as a wrapper around a capability that adds additional information, typically when one wants to offer or request capabilities via a marketplace.
 
+## Additional Resources
+<p align="center">
+<img src="https://github.com/hsu-aut/css-ontology/blob/documentation/images/images/CSS-Architecture_CSS-Mark.jpg?raw=true" width="800" title="CSS Architecture">
+</p>
+This is just a rather abstract ontology containing only the most important terms and relations. In order to model capabilities on a more detailed level as well as executable skills with all necessary information, there are extensions to this ontology on two levels:
 
-###
+- [CaSk](https://github.com/hsu-aut/cask) is an ontology that adds additional details (e.g., a state machine) while still staying extensible so that domain-specific ontologies can built on CaSk
+- On an even more detailed level, there are currently two domain-specific ontologies that can be used to model capabilities and skills on a very detailed level:
+  - The [CaSkMan ontology](https://github.com/aljoshakoecher/caskman) can be used to model capabilities and skills in manufacturing. It extends CaSk by standards such as DIN 8580 (manufacturing operations), VDI 2860 (handling operations) as well as WADL and OPC UA to model skills with interfaces based on web services as well as OPC UA.
+  - [RoboCaSk](https://github.com/Miguel2617/robocap) is an ontology for capabilities and skills of autonomous systems that can work collaboratively to achieve a common goal. It extends CaSk by additional elements to represent such systems and thei skill interfaces.
 
 ## Ontology example
-:construction:Coming soon... :construction:
+Detailed examples can be found in the two repositories of  [CaSkMan](https://github.com/aljoshakoecher/caskman) and [RoboCaSk](https://github.com/Miguel2617/robocap)
 
 ## Current Issues
 Here are some known issues that were found while creating this ontology:
