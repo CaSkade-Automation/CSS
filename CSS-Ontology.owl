@@ -4,12 +4,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.w3id.org/hsu-aut/css> .
+@base <http://www.w3id.org/hsu-aut/css#> .
 
 <http://www.w3id.org/hsu-aut/css> rdf:type owl:Ontology ;
-                                   owl:versionIRI <http://www.w3id.org/hsu-aut/css/1.0.1> ;
-                                   rdfs:comment "An ontology for the Capability, Skill and Service reference model defined by Plattform Industrie 4.0. See https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html for a description of the abstract reference model." ;
-                                   rdfs:isDefinedBy "https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html" .
+                                   owl:versionIRI <http://www.w3id.org/hsu-aut/css/2.0.0> ;
+                                   rdfs:comment """An ontology for the Capability, Skill and Service reference model defined by Plattform Industrie 4.0. See https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html for a description of the abstract reference model.
+
+Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/2025-i40-capabilities.pdf?__blob=publicationFile&v=5.""" ;
+                                   rdfs:isDefinedBy "https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/2025-i40-capabilities.pdf?__blob=publicationFile&v=5" ,
+                                                    "https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html" .
 
 #################################################################
 #    Object Properties
@@ -34,6 +37,18 @@
                     rdfs:range :StateMachine .
 
 
+###  http://www.w3id.org/hsu-aut/css#consistsOfState
+:consistsOfState rdf:type owl:ObjectProperty ;
+                 rdfs:domain :StateMachine ;
+                 rdfs:range :State .
+
+
+###  http://www.w3id.org/hsu-aut/css#consistsOfTransition
+:consistsOfTransition rdf:type owl:ObjectProperty ;
+                      rdfs:domain :StateMachine ;
+                      rdfs:range :Transition .
+
+
 ###  http://www.w3id.org/hsu-aut/css#controls
 :controls rdf:type owl:ObjectProperty ;
           rdfs:domain :Skill ;
@@ -49,14 +64,57 @@
 ###  http://www.w3id.org/hsu-aut/css#exposes
 :exposes rdf:type owl:ObjectProperty ;
          rdfs:domain :SkillInterface ;
-         rdfs:range :SkillParameter ,
-                    :StateMachine .
+         rdfs:range [ rdf:type owl:Class ;
+                      owl:unionOf ( :SkillParameter
+                                    :SkillTrigger
+                                    :StateMachine
+                                  )
+                    ] .
+
+
+###  http://www.w3id.org/hsu-aut/css#exposesSkillParameter
+:exposesSkillParameter rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :exposes ;
+                       rdfs:domain :SkillInterface ;
+                       rdfs:range :SkillParameter .
+
+
+###  http://www.w3id.org/hsu-aut/css#exposesSkillTrigger
+:exposesSkillTrigger rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :exposes ;
+                     rdfs:domain :SkillInterface ;
+                     rdfs:range :SkillTrigger .
+
+
+###  http://www.w3id.org/hsu-aut/css#exposesStateMachine
+:exposesStateMachine rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :exposes ;
+                     rdfs:domain :SkillInterface ;
+                     rdfs:range :StateMachine .
+
+
+###  http://www.w3id.org/hsu-aut/css#hasCurrentState
+:hasCurrentState rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Skill ;
+                 rdfs:range :State .
+
+
+###  http://www.w3id.org/hsu-aut/css#hasIncomingTransition
+:hasIncomingTransition rdf:type owl:ObjectProperty ;
+                       rdfs:domain :State ;
+                       rdfs:range :Transition .
 
 
 ###  http://www.w3id.org/hsu-aut/css#hasInput
 :hasInput rdf:type owl:ObjectProperty ;
           rdfs:domain :Process ;
           rdfs:range :Product .
+
+
+###  http://www.w3id.org/hsu-aut/css#hasOutgoingTransition
+:hasOutgoingTransition rdf:type owl:ObjectProperty ;
+                       rdfs:domain :State ;
+                       rdfs:range :Transition .
 
 
 ###  http://www.w3id.org/hsu-aut/css#hasOutput
@@ -67,8 +125,30 @@
 
 ###  http://www.w3id.org/hsu-aut/css#hasParameter
 :hasParameter rdf:type owl:ObjectProperty ;
-              rdfs:domain :Skill ;
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Skill
+                                          :SkillTrigger
+                                        )
+                          ] ;
               rdfs:range :SkillParameter .
+
+
+###  http://www.w3id.org/hsu-aut/css#hasSourceState
+:hasSourceState rdf:type owl:ObjectProperty ;
+                rdfs:domain :Transition ;
+                rdfs:range :State .
+
+
+###  http://www.w3id.org/hsu-aut/css#hasTargetState
+:hasTargetState rdf:type owl:ObjectProperty ;
+                rdfs:domain :Transition ;
+                rdfs:range :State .
+
+
+###  http://www.w3id.org/hsu-aut/css#hasTrigger
+:hasTrigger rdf:type owl:ObjectProperty ;
+            rdfs:domain :Skill ;
+            rdfs:range :SkillTrigger .
 
 
 ###  http://www.w3id.org/hsu-aut/css#isInputFor
@@ -77,12 +157,24 @@
             rdfs:range :ServiceOffer .
 
 
+###  http://www.w3id.org/hsu-aut/css#isInvokedBy
+:isInvokedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain :Transition ;
+             rdfs:range :SkillTrigger .
+
+
 ###  http://www.w3id.org/hsu-aut/css#isRealizedBy
 :isRealizedBy rdf:type owl:ObjectProperty ;
-              rdfs:domain :Capability ,
-                          :Property ;
-              rdfs:range :Skill ,
-                         :SkillParameter .
+              rdfs:domain [ rdf:type owl:Class ;
+                            owl:unionOf ( :Capability
+                                          :Property
+                                        )
+                          ] ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( :Skill
+                                         :SkillParameter
+                                       )
+                         ] .
 
 
 ###  http://www.w3id.org/hsu-aut/css#isRealizedBySkill
@@ -102,13 +194,16 @@
 ###  http://www.w3id.org/hsu-aut/css#isRestrictedBy
 :isRestrictedBy rdf:type owl:ObjectProperty ;
                 rdfs:domain :Capability ;
-                rdfs:range :CapabilityConstraint .
+                rdfs:range :Constraint .
 
 
 ###  http://www.w3id.org/hsu-aut/css#isSpecifiedBy
 :isSpecifiedBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :Capability ,
-                           :Service ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Capability
+                                           :Service
+                                         )
+                           ] ;
                rdfs:range :Property .
 
 
@@ -157,8 +252,18 @@
 
 ###  http://www.w3id.org/hsu-aut/css#references
 :references rdf:type owl:ObjectProperty ;
-            rdfs:domain :CapabilityConstraint ;
-            rdfs:range :Property .
+            rdfs:domain :TransitionConstraint ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( :Capability
+                                       :Service
+                                     )
+                       ] .
+
+
+###  http://www.w3id.org/hsu-aut/css#referencesProperty
+:referencesProperty rdf:type owl:ObjectProperty ;
+                    rdfs:domain :PropertyConstraint ;
+                    rdfs:range :Property .
 
 
 ###  http://www.w3id.org/hsu-aut/css#requiresCapability
@@ -194,17 +299,17 @@ Notes:
 - A capability can be realized by skills""" .
 
 
-###  http://www.w3id.org/hsu-aut/css#CapabilityConstraint
-:CapabilityConstraint rdf:type owl:Class ;
-                      owl:disjointWith :Resource ,
-                                       :Service ,
-                                       :ServiceOffer ,
-                                       :ServiceProvider ,
-                                       :ServiceRequester ,
-                                       :Skill ,
-                                       :SkillInterface ,
-                                       :SkillParameter ;
-                      rdfs:comment """Condition imposed on a capability that further details its applicability. 
+###  http://www.w3id.org/hsu-aut/css#Constraint
+:Constraint rdf:type owl:Class ;
+            owl:disjointWith :Resource ,
+                             :Service ,
+                             :ServiceOffer ,
+                             :ServiceProvider ,
+                             :ServiceRequester ,
+                             :Skill ,
+                             :SkillInterface ,
+                             :SkillParameter ;
+            rdfs:comment """Condition imposed on a capability that further details its applicability. 
 
 Notes:
 - A capability constraint can be formulated as one of the following three constraint types:
@@ -214,6 +319,16 @@ Notes:
 function.
 - A capability constraint restricts the values of the properties associated with the respective capability.
 - A capability constraint can involve one or more properties""" .
+
+
+###  http://www.w3id.org/hsu-aut/css#InputParameter
+:InputParameter rdf:type owl:Class ;
+                rdfs:subClassOf :SkillParameter .
+
+
+###  http://www.w3id.org/hsu-aut/css#OutputParameter
+:OutputParameter rdf:type owl:Class ;
+                 rdfs:subClassOf :SkillParameter .
 
 
 ###  http://www.w3id.org/hsu-aut/css#Process
@@ -268,6 +383,12 @@ Notes:
 Notes:
 - Properties may be used to describe and differentiate all kinds of PPR entities (i.e., products, process steps, resources)
 - Capabilities, services and offers are specified by properties in order to detail their description with regard to certain entities (e.g. products, process steps, resources)""" .
+
+
+###  http://www.w3id.org/hsu-aut/css#PropertyConstraint
+:PropertyConstraint rdf:type owl:Class ;
+                    rdfs:subClassOf :Constraint ;
+                    rdfs:comment "A PropertyConstraint is a constraint that determines the applicability of a Capability and that refers to one or more Properties of the same Capability (see Figure 15). An important aspect of PropertyConstraints is that they always refer to a single Capability and assume no knowledge of a sequence of Capabilities or dependencies between Capabilities." .
 
 
 ###  http://www.w3id.org/hsu-aut/css#Resource
@@ -377,8 +498,26 @@ Notes:
 - Skill parameters might have a relation or be equivalent to capability properties""" .
 
 
+###  http://www.w3id.org/hsu-aut/css#SkillTrigger
+:SkillTrigger rdf:type owl:Class .
+
+
+###  http://www.w3id.org/hsu-aut/css#State
+:State rdf:type owl:Class .
+
+
 ###  http://www.w3id.org/hsu-aut/css#StateMachine
 :StateMachine rdf:type owl:Class .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  http://www.w3id.org/hsu-aut/css#Transition
+:Transition rdf:type owl:Class .
+
+
+###  http://www.w3id.org/hsu-aut/css#TransitionConstraint
+:TransitionConstraint rdf:type owl:Class ;
+                      rdfs:subClassOf :Constraint ;
+                      rdfs:comment "A TransitionConstraint is an expression between multiple Capabilities or Services, determining the applicability of a Capability or Service in a wider context. In a Transition-Constraint, a dependent Capability or Service is restricted by one or more referenced Capabilities or Services. TransitionConstraints can be used to formulate requirements going beyond PropertyConstraints, especially sequence requirements." .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
