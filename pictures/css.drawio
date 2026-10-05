@@ -1,0 +1,411 @@
+<mxfile host="Electron">
+  <diagram id="d" name="class CSS">
+    <mxGraphModel dx="1591" dy="1142" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="714" pageHeight="1169" math="0" shadow="0" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="class CSS" rolle="rahmen" id="rahmen">
+          <mxCell parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;width=94;height=26;fillColor=none;strokeColor=#7A7A7A;fontFamily=Helvetica;fontSize=12;fontStyle=1;align=left;verticalAlign=middle;spacingLeft=8;fontColor=#222222;" vertex="1">
+            <mxGeometry height="634" width="885" x="-30" y="-186" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="ServiceRequester" iri="css:ServiceRequester" rolle="eigen" gruppe="service" id="sr">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="130" y="-130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="ServiceOffer" iri="css:ServiceOffer" rolle="eigen" gruppe="service" id="off">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="110" x="303" y="-130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="ServiceProvider" iri="css:ServiceProvider" rolle="eigen" gruppe="service" id="sp">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="125" x="495" y="-130" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Service" iri="css:Service" rolle="eigen" gruppe="service" id="svc">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="90" x="313" y="-65" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Product" iri="css:Product" rolle="eigen" id="prod">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Constraint" iri="css:Constraint" rolle="eigen" id="con">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="100" x="408" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="PropertyConstraint" iri="css:PropertyConstraint" rolle="eigen" id="pc">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="140" x="520" y="30" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="TransitionConstraint" iri="css:TransitionConstraint" rolle="eigen" id="tc">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="150" x="520" y="62" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Capability" iri="css:Capability" rolle="eigen" id="cap">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="100" x="308" y="125" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Property" iri="css:Property" rolle="eigen" id="prop">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="120" x="690" y="125" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Resource" iri="css:Resource" rolle="eigen" id="res">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="100" x="111" y="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Skill" iri="css:Skill" rolle="eigen" id="skill">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="100" x="308" y="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="SkillParameter" iri="css:SkillParameter" rolle="eigen" id="par">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="120" x="690" y="195" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Process" iri="css:Process" rolle="eigen" id="proc">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="100" y="250" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="StateMachine" iri="css:StateMachine" rolle="eigen" id="sm">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="105" x="265" y="275" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="SkillInterface" iri="css:SkillInterface" rolle="eigen" id="si">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="120" x="540" y="275" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="OutputParameter" iri="css:OutputParameter" rolle="eigen" id="outp">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="125" x="680" y="325" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="InputParameter" iri="css:InputParameter" rolle="eigen" id="inp">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="125" x="680" y="360" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="State" iri="css:State" rolle="eigen" id="st">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="80" x="81" y="355" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Transition" iri="css:Transition" rolle="eigen" id="tr">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="100" x="330" y="355" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="SkillTrigger" iri="css:SkillTrigger" rolle="eigen" id="trig">
+          <mxCell parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fontStyle=1;fontFamily=Helvetica;fontSize=12;fillColor=#DCE6F1;strokeColor=#2F5C8A;fontColor=#14283C;shadow=0;glass=0;align=center;verticalAlign=middle;" vertex="1">
+            <mxGeometry height="30" width="110" x="525" y="355" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" art="gen" id="k0">
+          <mxCell edge="1" parent="1" source="pc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=block;endFill=0;endSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="con">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" art="gen" id="k1">
+          <mxCell edge="1" parent="1" source="tc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=block;endFill=0;endSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="con">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" art="gen" id="k2">
+          <mxCell edge="1" parent="1" source="outp" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=block;endFill=0;endSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="par">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="830" y="340" />
+                <mxPoint x="830" y="210" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" art="gen" id="k3">
+          <mxCell edge="1" parent="1" source="inp" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=block;endFill=0;endSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="par">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="830" y="375" />
+                <mxPoint x="830" y="210" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="receives" art="assoc" iri="css:receives" gruppe="service" id="k4">
+          <mxCell edge="1" parent="1" source="sr" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="off">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="proposes" art="assoc" iri="css:proposes" gruppe="service" id="k5">
+          <mxCell edge="1" parent="1" source="sp" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" target="off">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="isInputFor" art="assoc" iri="css:isInputFor" gruppe="service" id="k6">
+          <mxCell edge="1" parent="1" source="svc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="off">
+            <mxGeometry relative="1" x="-0.1429" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="demands" art="assoc" iri="css:demands" gruppe="service" id="k7">
+          <mxCell edge="1" parent="1" source="sr" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="svc">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="200" y="-106" />
+                <mxPoint x="200" y="-56" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="offers" art="assoc" iri="css:offers" gruppe="service" id="k8">
+          <mxCell edge="1" parent="1" source="sp" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" target="svc">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="requiresProduct" art="assoc" iri="css:requiresProduct" gruppe="service" id="k9">
+          <mxCell edge="1" parent="1" source="sr" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.23;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;" target="prod">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="assures" art="assoc" iri="css:assures" gruppe="service" id="k10">
+          <mxCell edge="1" parent="1" source="svc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;" target="prod">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="offersUseOf" art="assoc" iri="css:offersUseOf" gruppe="service" id="k11">
+          <mxCell edge="1" parent="1" source="svc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.32;entryY=0;entryDx=0;entryDy=0;" target="cap">
+            <mxGeometry relative="1" x="-0.5625" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="isSpecifiedBy" art="assoc" iri="css:isSpecifiedBy" gruppe="service" id="k12">
+          <mxCell edge="1" parent="1" source="svc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0.6;entryY=0;entryDx=0;entryDy=0;" target="prop">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="references" art="assoc" iri="css:references" gruppe="service" id="k13">
+          <mxCell edge="1" parent="1" source="tc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;" target="svc">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="680" y="77" />
+                <mxPoint x="680" y="-20" />
+                <mxPoint x="385" y="-20" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hasInput" art="assoc" iri="css:hasInput" id="k14">
+          <mxCell edge="1" parent="1" source="proc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;" target="prod">
+            <mxGeometry relative="1" x="-0.4" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="hasOutput" art="assoc" iri="css:hasOutput" id="k15">
+          <mxCell edge="1" parent="1" source="proc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.55;exitY=0;exitDx=0;exitDy=0;entryX=0.55;entryY=1;entryDx=0;entryDy=0;" target="prod">
+            <mxGeometry relative="1" x="0.4" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="requiresCapability" art="assoc" iri="css:requiresCapability" id="k16">
+          <mxCell edge="1" parent="1" source="proc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.86;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="cap">
+            <mxGeometry relative="1" x="-0.0026" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="providesCapability" art="assoc" iri="css:providesCapability" id="k17">
+          <mxCell edge="1" parent="1" source="res" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="cap">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="providesSkill" art="assoc" iri="css:providesSkill" id="k18">
+          <mxCell edge="1" parent="1" source="res" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.2;entryDx=0;entryDy=0;" target="skill">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="controls" art="assoc" iri="css:controls" id="k19">
+          <mxCell edge="1" parent="1" source="skill" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="proc">
+            <mxGeometry relative="1" x="0.3" as="geometry">
+              <Array as="points">
+                <mxPoint x="225" y="210" />
+                <mxPoint x="225" y="265" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="behaviorConformsTo" art="assoc" iri="css:behaviorConformsTo" id="k20">
+          <mxCell edge="1" parent="1" source="res" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="sm">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="isRealizedBySkill" art="assoc" iri="css:isRealizedBySkill" id="k21">
+          <mxCell edge="1" parent="1" source="cap" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="skill">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="isSpecifiedBy" art="assoc" iri="css:isSpecifiedBy" id="k22">
+          <mxCell edge="1" parent="1" source="cap" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="prop">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="isRestrictedBy" art="assoc" iri="css:isRestrictedBy" id="k23">
+          <mxCell edge="1" parent="1" source="cap" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="con">
+            <mxGeometry relative="1" x="-0.4" as="geometry">
+              <mxPoint x="28" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="references" art="assoc" iri="css:references" id="k24">
+          <mxCell edge="1" parent="1" source="tc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="cap">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="referencesProperty" art="assoc" iri="css:referencesProperty" id="k25">
+          <mxCell edge="1" parent="1" source="pc" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="prop">
+            <mxGeometry relative="1" x="0.6269" y="-24" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="isRealizedBySkillParameter" art="assoc" iri="css:isRealizedBySkillParameter" id="k26">
+          <mxCell edge="1" parent="1" source="prop" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="par">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="hasParameter" art="assoc" iri="css:hasParameter" id="k27">
+          <mxCell edge="1" parent="1" source="skill" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="par">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="accessibleThrough" art="assoc" iri="css:accessibleThrough" id="k28">
+          <mxCell edge="1" parent="1" source="skill" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="si">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="behaviorConformsTo" art="assoc" iri="css:behaviorConformsTo" id="k29">
+          <mxCell edge="1" parent="1" source="skill" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.886;entryY=0;entryDx=0;entryDy=0;" target="sm">
+            <mxGeometry relative="1" x="-0.0004" y="-18" as="geometry">
+              <mxPoint y="1" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hasCurrentState" art="assoc" iri="css:hasCurrentState" id="k30">
+          <mxCell edge="1" parent="1" source="skill" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="st">
+            <mxGeometry relative="1" x="0.35" as="geometry">
+              <Array as="points">
+                <mxPoint x="240" y="219" />
+                <mxPoint x="240" y="322" />
+                <mxPoint x="121" y="322" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hasTrigger" art="assoc" iri="css:hasTrigger" id="k31">
+          <mxCell edge="1" parent="1" source="skill" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.95;exitY=1;exitDx=0;exitDy=0;entryX=0.1;entryY=0;entryDx=0;entryDy=0;" target="trig">
+            <mxGeometry relative="1" x="0.3" as="geometry">
+              <Array as="points">
+                <mxPoint x="403" y="316" />
+                <mxPoint x="536" y="316" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="exposesStateMachine" art="assoc" iri="css:exposesStateMachine" id="k32">
+          <mxCell edge="1" parent="1" source="si" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="sm">
+            <mxGeometry relative="1" x="-0.2" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="exposesSkillTrigger" art="assoc" iri="css:exposesSkillTrigger" id="k33">
+          <mxCell edge="1" parent="1" source="si" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.35;exitY=1;exitDx=0;exitDy=0;entryX=0.55;entryY=0;entryDx=0;entryDy=0;" target="trig">
+            <mxGeometry relative="1" as="geometry">
+              <mxPoint x="8" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="exposesSkillParameter" art="assoc" iri="css:exposesSkillParameter" id="k34">
+          <mxCell edge="1" parent="1" source="si" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.17;entryY=1;entryDx=0;entryDy=0;" target="par">
+            <mxGeometry relative="1" x="-0.8268" y="30" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="consistsOfState" art="assoc" iri="css:consistsOfState" id="k35">
+          <mxCell edge="1" parent="1" source="sm" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" target="st">
+            <mxGeometry relative="1" x="0.2" as="geometry">
+              <Array as="points">
+                <mxPoint x="281" y="338" />
+                <mxPoint x="145" y="338" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="consistsOfTransition" art="assoc" iri="css:consistsOfTransition" id="k36">
+          <mxCell edge="1" parent="1" source="sm" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.24;entryY=0;entryDx=0;entryDy=0;" target="tr">
+            <mxGeometry relative="1" x="0.006" as="geometry">
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hasIncomingTransition" art="assoc" iri="css:hasIncomingTransition" id="k37">
+          <mxCell edge="1" parent="1" source="st" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="tr">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="hasOutgoingTransition" art="assoc" iri="css:hasOutgoingTransition" id="k38">
+          <mxCell edge="1" parent="1" source="st" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="tr">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="hasSourceState" art="assoc" iri="css:hasSourceState" id="k39">
+          <mxCell edge="1" parent="1" source="tr" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="st">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="355" y="402" />
+                <mxPoint x="141" y="402" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hasTargetState" art="assoc" iri="css:hasTargetState" id="k40">
+          <mxCell edge="1" parent="1" source="tr" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=1;entryDx=0;entryDy=0;" target="st">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="380" y="418" />
+                <mxPoint x="113" y="418" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="isInvokedBy" art="assoc" iri="css:isInvokedBy" id="k41">
+          <mxCell edge="1" parent="1" source="tr" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="trig">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="hasParameter" art="assoc" iri="css:hasParameter" id="k42">
+          <mxCell edge="1" parent="1" source="trig" style="html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=12;fontFamily=Helvetica;fontSize=11;fontColor=#222222;labelBackgroundColor=#FFFFFF;strokeColor=#333333;jumpStyle=line;jumpSize=8;endArrow=open;endFill=0;endSize=8;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0.4;entryY=1;entryDx=0;entryDy=0;" target="par">
+            <mxGeometry relative="1" x="0.4" as="geometry">
+              <Array as="points">
+                <mxPoint x="660" y="364" />
+                <mxPoint x="660" y="315" />
+                <mxPoint x="738" y="315" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
