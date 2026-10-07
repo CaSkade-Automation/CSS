@@ -7,7 +7,8 @@
 @base <http://www.w3id.org/hsu-aut/css#> .
 
 <http://www.w3id.org/hsu-aut/css> rdf:type owl:Ontology ;
-                                   owl:versionIRI <http://www.w3id.org/hsu-aut/css/2.0.2> ;
+                                   owl:versionIRI <http://www.w3id.org/hsu-aut/css/3.0.0> ;
+                                   owl:versionInfo "3.0.0" ;
                                    rdfs:comment """An ontology for the Capability, Skill and Service reference model defined by Plattform Industrie 4.0. See https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.html for a description of the abstract reference model.
 
 Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/2025-i40-capabilities.pdf?__blob=publicationFile&v=5.""" ;
@@ -22,12 +23,6 @@ Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Down
 :accessibleThrough rdf:type owl:ObjectProperty ;
                    rdfs:domain :Skill ;
                    rdfs:range :SkillInterface .
-
-
-###  http://www.w3id.org/hsu-aut/css#assures
-:assures rdf:type owl:ObjectProperty ;
-         rdfs:domain :Service ;
-         rdfs:range :Product .
 
 
 ###  http://www.w3id.org/hsu-aut/css#behaviorConformsTo
@@ -104,6 +99,7 @@ Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Down
 
 ###  http://www.w3id.org/hsu-aut/css#hasIncomingTransition
 :hasIncomingTransition rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :hasTargetState ;
                        rdfs:domain :State ;
                        rdfs:range :Transition .
 
@@ -116,6 +112,7 @@ Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Down
 
 ###  http://www.w3id.org/hsu-aut/css#hasOutgoingTransition
 :hasOutgoingTransition rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :hasSourceState ;
                        rdfs:domain :State ;
                        rdfs:range :Transition .
 
@@ -196,7 +193,11 @@ Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Down
 
 ###  http://www.w3id.org/hsu-aut/css#isRestrictedBy
 :isRestrictedBy rdf:type owl:ObjectProperty ;
-                rdfs:domain :Capability ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :Capability
+                                            :Service
+                                          )
+                            ] ;
                 rdfs:range :Constraint .
 
 
@@ -230,7 +231,11 @@ Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Down
 
 ###  http://www.w3id.org/hsu-aut/css#provides
 :provides rdf:type owl:ObjectProperty ;
-          rdfs:domain :Resource .
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Resource
+                                      :Service
+                                    )
+                      ] .
 
 
 ###  http://www.w3id.org/hsu-aut/css#providesCapability
@@ -238,6 +243,14 @@ Includes extensions defined in https://www.plattform-i40.de/IP/Redaktion/DE/Down
                     rdfs:subPropertyOf :provides ;
                     rdfs:domain :Resource ;
                     rdfs:range :Capability .
+
+
+###  http://www.w3id.org/hsu-aut/css#providesProduct
+:providesProduct rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :provides ;
+                 rdfs:domain :Service ;
+                 rdfs:range :Product ;
+                 rdfs:comment "Expresses that the Service puts the manufactured Products into the possession of the ServiceRequester for usage, consumption, or disposal. Replaces the ambiguous :assures, which was removed in 3.0.0, see 2025-i40-capabilities.pdf, Section 4.2.1." .
 
 
 ###  http://www.w3id.org/hsu-aut/css#providesSkill

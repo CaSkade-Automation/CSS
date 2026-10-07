@@ -15,7 +15,7 @@ A *Skill* is an executable implementation of an encapsulated (automation) functi
 A *Service* is a description of the commercial aspects and means of provision of offered *Capabilities*. A service may be considered as a wrapper around a capability that adds additional information, typically when one wants to offer or request capabilities via a marketplace.
 
 ## Class Diagram
-The diagram shows all classes and object properties of the ontology. Arrows point from the domain to the range of a property; hollow triangles denote subclass relations. Properties with a union domain or range (`behaviorConformsTo`, `hasParameter`, `isSpecifiedBy`, `references`) are drawn once per member class. Not shown: the superproperties `provides`, `isRealizedBy` and `exposes` (their subproperties are drawn) and the disjointness axioms.
+The diagram shows all classes and object properties of the ontology. Arrows point from the domain to the range of a property; hollow triangles denote subclass relations. Properties with a union domain or range (`behaviorConformsTo`, `hasParameter`, `isRestrictedBy`, `isSpecifiedBy`, `references`) are drawn once per member class. Not shown: the superproperties `provides`, `isRealizedBy` and `exposes` (their subproperties are drawn) and the disjointness axioms.
 
 <p align="center">
 <img src="pictures/css.png" width="900" title="Class diagram of the CSS ontology">
